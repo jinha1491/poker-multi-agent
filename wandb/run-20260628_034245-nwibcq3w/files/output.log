@@ -1,0 +1,14 @@
+Loading sequences...
+Training on 10000 sequences after filtering UNK
+Train: 8000 | Val: 2000
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/jinhapark/poker-multi-agent/src/models/train.py", line 204, in <module>
+    train()
+    ~~~~~^^
+  File "/Users/jinhapark/poker-multi-agent/src/models/train.py", line 109, in train
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, patience=3, factor=0.5, verbose=True
+    )
+TypeError: ReduceLROnPlateau.__init__() got an unexpected keyword argument 'verbose'

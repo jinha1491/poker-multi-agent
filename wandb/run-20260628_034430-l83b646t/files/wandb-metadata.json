@@ -1,0 +1,36 @@
+{
+  "os":  "macOS-14.3.1-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.3",
+  "startedAt":  "2026-06-28T08:44:30.229016Z",
+  "program":  "-m src.models.train",
+  "git":  {
+    "remote":  "https://jinha1491:@github.com/jinha1491/poker-multi-agent.git",
+    "commit":  "67c8c2bb2c63d77166b741173f125ed4fe0e4e5a"
+  },
+  "email":  "jinha1491@gmail.com",
+  "root":  "/Users/jinhapark/poker-multi-agent",
+  "host":  "Jins-MacBook-Pro.local",
+  "executable":  "/Users/jinhapark/poker-multi-agent/venv/bin/python",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "245107195904",
+      "used":  "154753769472"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "apple":  {
+    "name":  "Apple M2",
+    "ecpuCores":  4,
+    "pcpuCores":  4,
+    "gpuCores":  10,
+    "memoryGb":  16,
+    "swapTotalBytes":  "3221225472",
+    "ramTotalBytes":  "17179869184",
+    "macModel":  "Mac14,7"
+  },
+  "writerId":  "casel5x5gpguegj2fq23ja4zkzscoj5y"
+}

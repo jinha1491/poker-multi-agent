@@ -1,0 +1,38 @@
+Loading sequences...
+Training on 10000 sequences after filtering UNK
+Train: 8000 | Val: 2000
+
+Starting training...
+/Users/jinhapark/poker-multi-agent/venv/lib/python3.13/site-packages/torch/nn/modules/transformer.py:529: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /Users/runner/work/pytorch/pytorch/aten/src/ATen/NestedTensorImpl.cpp:182.)
+  output = torch._nested_tensor_from_mask(
+  New best model saved (val_acc: 0.2930)
+Epoch 01/20 | Train Loss: 1.1775 | Train Acc: 0.3686 | Val Loss: 0.9802 | Val Acc: 0.2930
+  New best model saved (val_acc: 0.3915)
+Epoch 02/20 | Train Loss: 0.9960 | Train Acc: 0.4180 | Val Loss: 0.9568 | Val Acc: 0.3915
+  New best model saved (val_acc: 0.4105)
+Epoch 03/20 | Train Loss: 0.9762 | Train Acc: 0.4384 | Val Loss: 0.9541 | Val Acc: 0.4105
+  New best model saved (val_acc: 0.4300)
+Epoch 04/20 | Train Loss: 0.9578 | Train Acc: 0.4595 | Val Loss: 0.9507 | Val Acc: 0.4300
+  New best model saved (val_acc: 0.4365)
+Epoch 05/20 | Train Loss: 0.9524 | Train Acc: 0.4575 | Val Loss: 0.9307 | Val Acc: 0.4365
+Epoch 06/20 | Train Loss: 0.9415 | Train Acc: 0.4730 | Val Loss: 0.9340 | Val Acc: 0.4355
+  New best model saved (val_acc: 0.4545)
+Epoch 07/20 | Train Loss: 0.9353 | Train Acc: 0.4669 | Val Loss: 0.9241 | Val Acc: 0.4545
+  New best model saved (val_acc: 0.4590)
+Epoch 08/20 | Train Loss: 0.9277 | Train Acc: 0.4686 | Val Loss: 0.9160 | Val Acc: 0.4590
+Epoch 09/20 | Train Loss: 0.9204 | Train Acc: 0.4765 | Val Loss: 0.9065 | Val Acc: 0.4250
+  New best model saved (val_acc: 0.4725)
+Epoch 10/20 | Train Loss: 0.9117 | Train Acc: 0.4868 | Val Loss: 0.9142 | Val Acc: 0.4725
+Epoch 11/20 | Train Loss: 0.9063 | Train Acc: 0.4780 | Val Loss: 0.9054 | Val Acc: 0.4500
+  New best model saved (val_acc: 0.5700)
+Epoch 12/20 | Train Loss: 0.9098 | Train Acc: 0.4763 | Val Loss: 0.8900 | Val Acc: 0.5700
+Epoch 13/20 | Train Loss: 0.9021 | Train Acc: 0.5024 | Val Loss: 0.8854 | Val Acc: 0.4870
+Epoch 14/20 | Train Loss: 0.8951 | Train Acc: 0.4911 | Val Loss: 0.8952 | Val Acc: 0.5330
+Epoch 15/20 | Train Loss: 0.8989 | Train Acc: 0.4893 | Val Loss: 0.8862 | Val Acc: 0.5385
+Epoch 16/20 | Train Loss: 0.8897 | Train Acc: 0.5076 | Val Loss: 0.8906 | Val Acc: 0.5190
+Epoch 17/20 | Train Loss: 0.8901 | Train Acc: 0.5035 | Val Loss: 0.8898 | Val Acc: 0.5135
+Epoch 18/20 | Train Loss: 0.8826 | Train Acc: 0.4950 | Val Loss: 0.8801 | Val Acc: 0.4890
+Epoch 19/20 | Train Loss: 0.8783 | Train Acc: 0.5015 | Val Loss: 0.8844 | Val Acc: 0.4980
+Epoch 20/20 | Train Loss: 0.8799 | Train Acc: 0.4945 | Val Loss: 0.8773 | Val Acc: 0.4810
+
+Training complete. Best val accuracy: 0.5700
