@@ -4,3 +4,5 @@ __pycache__/
 *.pyc
 .DS_Store
 chroma_db/
+src/models/poker_distilbert/
+wandb/
