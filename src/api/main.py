@@ -9,6 +9,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from agents.supervisor import build_graph
+from src.rl.inference import RLAgent
 
 app = FastAPI()
 
@@ -21,6 +22,7 @@ app.add_middleware(
 )
 
 graph = build_graph()
+rl_agent = RLAgent()
 
 
 class HandRequest(BaseModel):
@@ -28,9 +30,24 @@ class HandRequest(BaseModel):
     opponent_action: str
 
 
+class RLRequest(BaseModel):
+    hand_situation: str
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+@app.post("/rl-analyze")
+def rl_analyze(request: RLRequest):
+    """
+    Get a decision from the trained RL policy — a learned strategy
+    from self-play, as opposed to the LangGraph agent's RAG-based
+    reasoning approach.
+    """
+    result = rl_agent.decide(request.hand_situation)
+    return result
 
 
 @app.post("/analyze")
