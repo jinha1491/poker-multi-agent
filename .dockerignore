@@ -1,0 +1,12 @@
+.git/
+.env
+venv/
+frontend/
+chroma_db/
+wandb/
+src/models/poker_distilbert/
+src/models/poker_distilbert_v2/
+src/data/sequences.json
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,4 +1,5 @@
 import torch
+import os
 from src.rl.policy import PokerPolicy
 
 
@@ -14,7 +15,7 @@ class RLAgent:
 
     def __init__(
         self,
-        distilbert_path: str = "src/models/poker_distilbert",
+	distilbert_path: str = os.getenv("DISTILBERT_PATH", "src/models/poker_distilbert"),
         policy_weights_path: str = "src/rl/policy_head.pt",
     ):
         print("Loading RL agent...")
