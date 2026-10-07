@@ -1,69 +1,44 @@
-import torch
 import os
-from src.rl.policy import PokerPolicy
+import torch
+from src.rl.policy import PokerPolicy, parse_state, state_features
 
 
 class RLAgent:
     """
-    Loads the trained RL policy for inference.
-
-    We rebuild the same architecture used during training (frozen
-    DistilBERT + policy head), then load the trained weights into
-    just the policy head. DistilBERT weights come from the fine-tuned
-    checkpoint automatically since PokerPolicy loads them fresh.
+    Serves the trained RL policy. Uses structured state features only:
+    across 3 seeds, features-only averaged 0.795 reward vs 0.685 when
+    the DistilBERT embedding was concatenated in.
     """
 
-    def __init__(
-        self,
-	distilbert_path: str = os.getenv("DISTILBERT_PATH", "src/models/poker_distilbert"),
-        policy_weights_path: str = "src/rl/policy_head.pt",
-    ):
-        print("Loading RL agent...")
-        self.policy = PokerPolicy(distilbert_path=distilbert_path, hidden_dim=128)
-
-        # load the trained policy head weights
+    def __init__(self, policy_weights_path=os.getenv("RL_WEIGHTS", "src/rl/policy_head.pt")):
+        self.policy = PokerPolicy(use_embedding=False)
         state_dict = torch.load(policy_weights_path, map_location="cpu")
         self.policy.policy_head.load_state_dict(state_dict)
         self.policy.eval()
-        print("RL agent loaded.")
 
     def decide(self, hand_situation: str) -> dict:
-        """
-        Given a hand situation as text, return the RL agent's decision.
-        Uses greedy action selection (argmax) for inference — during
-        training we sampled for exploration, but for serving we want
-        the policy's best guess, not a random sample.
-        """
+        s = parse_state(hand_situation)
+        feats = state_features(s["hand_strength"], s["position"], s["stack_depth"]).unsqueeze(0)
+
         with torch.no_grad():
-            logits = self.policy.forward([hand_situation])
-            probs = torch.softmax(logits, dim=-1)[0]
+            probs = torch.softmax(self.policy.policy_head(feats), dim=-1)[0]
 
-        action_idx = torch.argmax(probs).item()
-        action = self.policy.ACTIONS[action_idx]
-
-        distribution = {
-            self.policy.ACTIONS[i]: round(probs[i].item(), 4)
-            for i in range(len(self.policy.ACTIONS))
-        }
-
+        # greedy at serving time: we want the policy's best answer, not a sample
+        idx = int(torch.argmax(probs))
         return {
-            "action": action,
-            "confidence": round(probs[action_idx].item(), 4),
-            "distribution": distribution,
+            "action": self.policy.ACTIONS[idx],
+            "confidence": round(probs[idx].item(), 4),
+            "distribution": {a: round(probs[i].item(), 4) for i, a in enumerate(self.policy.ACTIONS)},
         }
 
 
 if __name__ == "__main__":
     agent = RLAgent()
-
-    test_cases = [
+    tests = [
         "You are in the BTN position with deep stacks. You have a premium hand.",
         "You are in the UTG position with short stacks. You have a weak hand.",
         "You are in the CO position with medium stacks. You have a medium strength hand.",
     ]
-
-    for text in test_cases:
-        result = agent.decide(text)
-        print(f"\nState: {text}")
-        print(f"Decision: {result['action']} (confidence: {result['confidence']})")
-        print(f"Distribution: {result['distribution']}")
+    for t in tests:
+        r = agent.decide(t)
+        print(f"\n{t}\n-> {r['action']} ({r['confidence']})  {r['distribution']}")

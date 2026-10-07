@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
@@ -13,7 +13,6 @@ from src.rl.inference import RLAgent
 
 app = FastAPI()
 
-# allow React frontend to talk to this API
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -41,13 +40,11 @@ def health():
 
 @app.post("/rl-analyze")
 def rl_analyze(request: RLRequest):
-    """
-    Get a decision from the trained RL policy — a learned strategy
-    from self-play, as opposed to the LangGraph agent's RAG-based
-    reasoning approach.
-    """
-    result = rl_agent.decide(request.hand_situation)
-    return result
+    try:
+        return rl_agent.decide(request.hand_situation)
+    except ValueError as e:
+        # input didn't match the expected format, so it's a client error, not a crash
+        raise HTTPException(status_code=400, detail=str(e))
 
 
 @app.post("/analyze")
@@ -62,12 +59,10 @@ def analyze(request: HandRequest):
     })
 
     def stream_response():
-        # stream each agent output one by one
         yield f"data: {json.dumps({'type': 'hand_analysis', 'data': result['hand_analysis']})}\n\n"
         yield f"data: {json.dumps({'type': 'opponent_model', 'data': result['opponent_model']})}\n\n"
         yield f"data: {json.dumps({'type': 'strategy', 'data': result['strategy']})}\n\n"
 
-        # stream explanation word by word
         words = result["final_explanation"].split()
         explanation_so_far = ""
         for word in words:

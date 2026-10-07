@@ -1,158 +1,110 @@
+import argparse
+import copy
+import random
+import numpy as np
 import torch
 import torch.optim as optim
-import numpy as np
-import copy
 import wandb
 from src.rl.environment import SimplifiedPokerEnv
-from src.rl.policy import PokerPolicy
+from src.rl.policy import PokerPolicy, state_features
 
 
-def train_rl(
-    num_episodes: int = 3000,
-    batch_size: int = 32,
-    learning_rate: float = 5e-4,
-    snapshot_interval: int = 200,
-    entropy_coef: float = 0.001,
-):
+def train_rl(seed=0, use_embedding=True, num_episodes=3000, batch_size=32,
+             learning_rate=5e-4, snapshot_interval=200, entropy_coef=0.001):
     """
-    Train the poker policy using REINFORCE with a self-play baseline
-    and light entropy regularization.
-
-    Background: an earlier run without entropy regularization achieved
-    0.65-0.68 avg reward but converged to a policy that favored "check"
-    broadly rather than learning sharper bucket-specific optimal actions
-    (e.g., it didn't learn to fold clearly weak hands, despite fold
-    being the clear optimal action there). This is a classic premature
-    convergence to a "safe" local optimum in policy gradient methods.
-
-    A stronger entropy_coef (0.01) tested previously destabilized
-    training and lowered average reward (0.65). This run uses a much
-    smaller entropy_coef (0.001) plus a lower learning rate (5e-4) and
-    more episodes (3000) to encourage sufficient exploration early on
-    without the instability of the earlier attempt.
-
-    Self-play mechanism:
-    Every `snapshot_interval` episodes, we freeze a copy of the current
-    policy as the "opponent snapshot" and compare average reward against
-    it on the same batch of states.
+    REINFORCE with a moving-average baseline, self-play snapshots, and a
+    light entropy bonus. Seeded so each run is reproducible, and run
+    across several seeds to check convergence is reliable, not lucky.
     """
-    wandb.init(
-        project="poker-rl",
-        config={
-            "num_episodes": num_episodes,
-            "batch_size": batch_size,
-            "learning_rate": learning_rate,
-            "snapshot_interval": snapshot_interval,
-            "entropy_coef": entropy_coef,
-            "hidden_dim": 128,
-            "algorithm": "REINFORCE with self-play baseline + light entropy regularization",
-        }
-    )
-    cfg = wandb.config
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+
+    tag = "emb_feat" if use_embedding else "feat_only"
+    wandb.init(project="poker-rl", name=f"{tag}-seed{seed}", config={
+        "seed": seed, "use_embedding": use_embedding, "num_episodes": num_episodes,
+        "batch_size": batch_size, "learning_rate": learning_rate,
+        "snapshot_interval": snapshot_interval, "entropy_coef": entropy_coef,
+        "hidden_dim": 128, "encoder": "poker_distilbert_v2" if use_embedding else None,
+    })
 
     env = SimplifiedPokerEnv()
-
-    print("Loading policy network...")
-    policy = PokerPolicy(hidden_dim=cfg.hidden_dim)
-
-    optimizer = optim.Adam(policy.policy_head.parameters(), lr=cfg.learning_rate)
+    policy = PokerPolicy(use_embedding=use_embedding)
+    optimizer = optim.Adam(policy.policy_head.parameters(), lr=learning_rate)
 
     opponent_snapshot = copy.deepcopy(policy.policy_head)
     opponent_snapshot.eval()
 
     reward_baseline = 0.0
     baseline_alpha = 0.05
-
-    print(f"\nStarting RL training for {cfg.num_episodes} episodes...")
-
     episode_rewards = []
 
-    for episode in range(1, cfg.num_episodes + 1):
-        states = [env.sample_state() for _ in range(cfg.batch_size)]
-        texts = [s["text"] for s in states]
+    print(f"Training {tag}, seed {seed}, {num_episodes} episodes...")
 
-        embeddings = policy.encode_state(texts)
+    for episode in range(1, num_episodes + 1):
+        states = [env.sample_state() for _ in range(batch_size)]
+        feats = torch.stack([state_features(s["hand_strength"], s["position"], s["stack_depth"])
+                             for s in states])
+        x = policy.build_input([s["text"] for s in states], feats)
 
-        # --- current policy forward pass ---
-        logits = policy.policy_head(embeddings)
-        probs = torch.softmax(logits, dim=-1)
-        dist = torch.distributions.Categorical(probs)
-        action_indices = dist.sample()
-        log_probs = dist.log_prob(action_indices)
+        logits = policy.policy_head(x)
+        dist = torch.distributions.Categorical(logits=logits)
+        actions = dist.sample()
+        log_probs = dist.log_prob(actions)
 
-        rewards = []
-        for i, state in enumerate(states):
-            action = policy.ACTIONS[action_indices[i].item()]
-            reward = env.step(state, action)
-            rewards.append(reward)
-        rewards = torch.tensor(rewards, dtype=torch.float)
+        rewards = torch.tensor([env.step(s, policy.ACTIONS[a.item()])
+                                for s, a in zip(states, actions)], dtype=torch.float)
 
-        # --- opponent snapshot forward pass (self-play comparison) ---
+        # self-play: compare against a frozen earlier copy playing greedily
         with torch.no_grad():
-            opp_logits = opponent_snapshot(embeddings)
-            opp_probs = torch.softmax(opp_logits, dim=-1)
-            opp_action_indices = torch.argmax(opp_probs, dim=-1)
-
-            opp_rewards = []
-            for i, state in enumerate(states):
-                action = policy.ACTIONS[opp_action_indices[i].item()]
-                reward = env.step(state, action)
-                opp_rewards.append(reward)
-            opp_rewards = torch.tensor(opp_rewards, dtype=torch.float)
-
+            opp_actions = opponent_snapshot(x).argmax(dim=-1)
+            opp_rewards = torch.tensor([env.step(s, policy.ACTIONS[a.item()])
+                                        for s, a in zip(states, opp_actions)], dtype=torch.float)
         self_play_advantage = (rewards.mean() - opp_rewards.mean()).item()
 
-        batch_mean_reward = rewards.mean().item()
-        reward_baseline = (1 - baseline_alpha) * reward_baseline + baseline_alpha * batch_mean_reward
-
+        batch_mean = rewards.mean().item()
+        reward_baseline = (1 - baseline_alpha) * reward_baseline + baseline_alpha * batch_mean
         advantages = rewards - reward_baseline
 
-        # small entropy bonus — enough to prevent premature convergence
-        # to a "safe" local optimum, without destabilizing training like
-        # the earlier entropy_coef=0.01 experiment did
         entropy = dist.entropy().mean()
-
-        # REINFORCE loss: -log_prob * advantage, with light entropy bonus
-        loss = -(log_probs * advantages).mean() - cfg.entropy_coef * entropy
+        loss = -(log_probs * advantages).mean() - entropy_coef * entropy
 
         optimizer.zero_grad()
         loss.backward()
         torch.nn.utils.clip_grad_norm_(policy.policy_head.parameters(), max_norm=1.0)
         optimizer.step()
 
-        episode_rewards.append(batch_mean_reward)
+        episode_rewards.append(batch_mean)
 
-        if episode % cfg.snapshot_interval == 0:
+        if episode % snapshot_interval == 0:
             opponent_snapshot = copy.deepcopy(policy.policy_head)
             opponent_snapshot.eval()
-            print(f"  Updated self-play snapshot at episode {episode}")
 
         if episode % 10 == 0:
-            recent_avg = np.mean(episode_rewards[-50:])
-            wandb.log({
-                "episode": episode,
-                "batch_mean_reward": batch_mean_reward,
-                "recent_avg_reward": recent_avg,
-                "self_play_advantage": self_play_advantage,
-                "loss": loss.item(),
-                "reward_baseline": reward_baseline,
-                "entropy": entropy.item(),
-            })
+            wandb.log({"episode": episode, "batch_mean_reward": batch_mean,
+                       "recent_avg_reward": np.mean(episode_rewards[-50:]),
+                       "self_play_advantage": self_play_advantage,
+                       "entropy": entropy.item(), "loss": loss.item()})
 
-        if episode % 100 == 0:
-            recent_avg = np.mean(episode_rewards[-50:])
-            print(f"Episode {episode:04d}/{cfg.num_episodes} | "
-                  f"Avg Reward (last 50): {recent_avg:.4f} | "
-                  f"Self-play advantage: {self_play_advantage:.4f} | "
-                  f"Entropy: {entropy.item():.4f} | "
-                  f"Loss: {loss.item():.4f}")
+        if episode % 250 == 0:
+            print(f"Episode {episode:04d} | Avg Reward (last 50): {np.mean(episode_rewards[-50:]):.4f} "
+                  f"| Entropy: {entropy.item():.4f}")
 
-    torch.save(policy.policy_head.state_dict(), "src/rl/policy_head.pt")
-    print("\nRL training complete. Policy head saved to src/rl/policy_head.pt")
+    # average over the last 200 episodes is a steadier number than the last 50
+    final = float(np.mean(episode_rewards[-200:]))
+    path = f"src/rl/policy_head_{tag}_seed{seed}.pt"
+    torch.save(policy.policy_head.state_dict(), path)
+    print(f"\nFINAL {tag} seed {seed}: avg reward (last 200 episodes) = {final:.4f}")
+    print(f"Saved to {path}")
 
+    wandb.summary["final_avg_reward"] = final
     wandb.finish()
-    return policy
+    return final
 
 
 if __name__ == "__main__":
-    train_rl()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--no-embedding", action="store_true")
+    args = ap.parse_args()
+    train_rl(seed=args.seed, use_embedding=not args.no_embedding)
