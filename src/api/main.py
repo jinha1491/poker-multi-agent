@@ -8,9 +8,11 @@ import os
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from agents.supervisor import build_graph
 from src.rl.inference import RLAgent
 from src.models.predictor import ActionPredictor
+
+# /analyze calls OpenAI on every request, so public deployments can switch it off
+ENABLE_ANALYZE = os.getenv("ENABLE_ANALYZE", "true").lower() == "true"
 
 app = FastAPI()
 
@@ -21,9 +23,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-graph = build_graph()
 rl_agent = RLAgent()
 predictor = ActionPredictor()
+
+graph = None
+if ENABLE_ANALYZE:
+    from agents.supervisor import build_graph
+    graph = build_graph()
 
 
 class HandRequest(BaseModel):
@@ -32,6 +38,10 @@ class HandRequest(BaseModel):
 
 
 class RLRequest(BaseModel):
+    hand_situation: str
+
+
+class PredictRequest(BaseModel):
     hand_situation: str
 
 
@@ -49,10 +59,6 @@ def rl_analyze(request: RLRequest):
         raise HTTPException(status_code=400, detail=str(e))
 
 
-class PredictRequest(BaseModel):
-    hand_situation: str
-
-
 @app.post("/predict")
 def predict(request: PredictRequest):
     """Fine-tuned DistilBERT: predicts the solver's action for a PokerBench-format hand."""
@@ -63,6 +69,10 @@ def predict(request: PredictRequest):
 
 @app.post("/analyze")
 def analyze(request: HandRequest):
+    if graph is None:
+        raise HTTPException(status_code=503,
+                            detail="/analyze is turned off in this deployment. Run the project locally to use it.")
+
     result = graph.invoke({
         "hand_situation": request.hand_situation,
         "opponent_action": request.opponent_action,
