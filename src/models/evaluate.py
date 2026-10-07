@@ -1,6 +1,6 @@
+import os
 import json
 import torch
-import numpy as np
 import matplotlib.pyplot as plt
 from collections import Counter
 from datasets import load_dataset
@@ -9,7 +9,10 @@ from transformers import DistilBertTokenizer, DistilBertForSequenceClassificatio
 
 LABEL_MAP = {"fold": 0, "call": 1, "check": 2, "raise": 3, "bet": 4}
 LABEL_NAMES = ["fold", "call", "check", "raise", "bet"]
-MODEL_PATH = "src/models/poker_distilbert"
+
+# which model to evaluate, and what to call its output files
+MODEL_PATH = os.getenv("MODEL_PATH", "src/models/poker_distilbert")
+TAG = os.getenv("TAG", "v1")
 
 
 def load_test_set():
@@ -20,7 +23,6 @@ def load_test_set():
 
     for row in ds:
         raw = row["output"].lower().strip()
-        # "bet 18" -> "bet", same cleanup as training
         action = raw.split()[0] if raw else ""
         if action not in LABEL_MAP:
             skipped[action] += 1
@@ -49,8 +51,7 @@ def predict(model, tokenizer, texts, device, batch_size=32):
     return preds
 
 
-def plot_confusion(cm, path="src/models/confusion_matrix.png"):
-    # normalize by row so each cell = % of that true label
+def plot_confusion(cm, path):
     cm_pct = cm / cm.sum(axis=1, keepdims=True)
 
     fig, ax = plt.subplots(figsize=(6, 5))
@@ -59,7 +60,7 @@ def plot_confusion(cm, path="src/models/confusion_matrix.png"):
     ax.set_yticks(range(5), LABEL_NAMES)
     ax.set_xlabel("Predicted")
     ax.set_ylabel("True")
-    ax.set_title("DistilBERT on PokerBench test set")
+    ax.set_title(f"DistilBERT {TAG} on PokerBench test set")
 
     for r in range(5):
         for c in range(5):
@@ -74,14 +75,13 @@ def plot_confusion(cm, path="src/models/confusion_matrix.png"):
 
 def main():
     device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-    print(f"Device: {device}")
+    print(f"Device: {device} | Model: {MODEL_PATH} | Tag: {TAG}")
 
     tokenizer = DistilBertTokenizer.from_pretrained(MODEL_PATH)
     model = DistilBertForSequenceClassification.from_pretrained(MODEL_PATH).to(device)
 
     texts, labels = load_test_set()
 
-    # baseline: always guess the most common label
     majority = Counter(labels).most_common(1)[0][0]
     baseline_acc = sum(1 for l in labels if l == majority) / len(labels)
 
@@ -90,23 +90,25 @@ def main():
 
     acc = accuracy_score(labels, preds)
     print(f"\nMajority-class baseline: {baseline_acc:.4f} (always '{LABEL_NAMES[majority]}')")
-    print(f"DistilBERT test accuracy: {acc:.4f}\n")
+    print(f"DistilBERT {TAG} test accuracy: {acc:.4f}\n")
 
     print(classification_report(labels, preds, target_names=LABEL_NAMES, digits=4))
 
     cm = confusion_matrix(labels, preds)
-    plot_confusion(cm)
+    plot_confusion(cm, f"src/models/confusion_matrix_{TAG}.png")
 
     results = {
+        "model_path": MODEL_PATH,
         "test_accuracy": acc,
         "majority_baseline": baseline_acc,
         "num_test_hands": len(labels),
         "report": classification_report(labels, preds, target_names=LABEL_NAMES, output_dict=True),
         "confusion_matrix": cm.tolist(),
     }
-    with open("src/models/test_results.json", "w") as f:
+    out_path = f"src/models/test_results_{TAG}.json"
+    with open(out_path, "w") as f:
         json.dump(results, f, indent=2)
-    print("Results saved to src/models/test_results.json")
+    print(f"Results saved to {out_path}")
 
 
 if __name__ == "__main__":
