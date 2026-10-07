@@ -1,0 +1,3002 @@
+[
+  {
+    "idx": 12,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.597621958993841,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 11.764215708011761
+  },
+  {
+    "idx": 34,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.07146274999831803,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 12.44655712498934
+  },
+  {
+    "idx": 67,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05427629100449849,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 11.871639042001334
+  },
+  {
+    "idx": 108,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.05464037500496488,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 11.197801499991328
+  },
+  {
+    "idx": 133,
+    "street": "turn",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.0515938750031637,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.386862999992445
+  },
+  {
+    "idx": 227,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05497708400071133,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.474205624996102
+  },
+  {
+    "idx": 230,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.053933666000375524,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.465807583008427
+  },
+  {
+    "idx": 306,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05253150001226459,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.227590916008921
+  },
+  {
+    "idx": 327,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.0730993339966517,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.328339582993067
+  },
+  {
+    "idx": 488,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.06417833399609663,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.671084500005236
+  },
+  {
+    "idx": 507,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.056540292003774084,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.370175792006194
+  },
+  {
+    "idx": 512,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.06558691601094324,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.132291166999494
+  },
+  {
+    "idx": 575,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "fold",
+    "bert_latency": 0.06406783300917596,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.097208375009359
+  },
+  {
+    "idx": 616,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "call",
+    "bert_latency": 0.057446625010925345,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.699858333013253
+  },
+  {
+    "idx": 618,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.052457874990068376,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.767631040987908
+  },
+  {
+    "idx": 812,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.053887832997133955,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.989576042004046
+  },
+  {
+    "idx": 817,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05520879199320916,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.247366541996598
+  },
+  {
+    "idx": 825,
+    "street": "flop",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05046474999107886,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 4.952103125004214
+  },
+  {
+    "idx": 843,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.05402666699956171,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 4.8955467919877265
+  },
+  {
+    "idx": 878,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.056860208002035506,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.433235000004061
+  },
+  {
+    "idx": 895,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.057317875005537644,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.650765958009288
+  },
+  {
+    "idx": 917,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05539820800186135,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.07474695899873
+  },
+  {
+    "idx": 927,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05626662498980295,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.102704874996562
+  },
+  {
+    "idx": 930,
+    "street": "flop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05260012499638833,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.343457124996348
+  },
+  {
+    "idx": 931,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.053999417010345496,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.617983707998064
+  },
+  {
+    "idx": 932,
+    "street": "flop",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.054267500003334135,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 6.89136716700159
+  },
+  {
+    "idx": 939,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05282616600743495,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.432297583000036
+  },
+  {
+    "idx": 941,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.054537584001081996,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.90262929200253
+  },
+  {
+    "idx": 945,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05438562500057742,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.847291665995726
+  },
+  {
+    "idx": 970,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.053862083004787564,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.40384491700388
+  },
+  {
+    "idx": 981,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.053517084001214243,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.977175250009168
+  },
+  {
+    "idx": 1038,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05270254200149793,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.412153041004785
+  },
+  {
+    "idx": 1077,
+    "street": "flop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05097604099137243,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.955656624995754
+  },
+  {
+    "idx": 1083,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.05398645800596569,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.926950833003502
+  },
+  {
+    "idx": 1104,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05315595799766015,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.789670165991993
+  },
+  {
+    "idx": 1112,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05834037499153055,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.360316625010455
+  },
+  {
+    "idx": 1131,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.0541629590006778,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.816828250011895
+  },
+  {
+    "idx": 1132,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.053136458998778835,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.34713808298693
+  },
+  {
+    "idx": 1195,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05341799999587238,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 6.192836249989341
+  },
+  {
+    "idx": 1240,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05322345798776951,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 6.094182499989984
+  },
+  {
+    "idx": 1286,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05278804199770093,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 7.296593500010204
+  },
+  {
+    "idx": 1341,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.05337300000246614,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 6.716239500005031
+  },
+  {
+    "idx": 1348,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.05370866699377075,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.731598500002292
+  },
+  {
+    "idx": 1408,
+    "street": "turn",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05376383299881127,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.473121584000182
+  },
+  {
+    "idx": 1438,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05377099999168422,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.325135874998523
+  },
+  {
+    "idx": 1477,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.05386345800070558,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.80449383299856
+  },
+  {
+    "idx": 1498,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "call",
+    "bert_latency": 0.05289825001091231,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.553226707997965
+  },
+  {
+    "idx": 1550,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05282212501333561,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.887620458001038
+  },
+  {
+    "idx": 1556,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.054219957994064316,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.365476082995883
+  },
+  {
+    "idx": 1567,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "call",
+    "bert_latency": 0.052450832998147234,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.165349625007366
+  },
+  {
+    "idx": 1573,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.052649332996224985,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 6.185479041989311
+  },
+  {
+    "idx": 1586,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.05309787500300445,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 6.69156683300389
+  },
+  {
+    "idx": 1675,
+    "street": "flop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05221545899985358,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.376678540997091
+  },
+  {
+    "idx": 1692,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.052065333002246916,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.17831895800191
+  },
+  {
+    "idx": 1735,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "fold",
+    "bert_latency": 0.05362037499435246,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.693326708991663
+  },
+  {
+    "idx": 1763,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.054057834000559524,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 4.602915542011033
+  },
+  {
+    "idx": 1772,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05312512499222066,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.118114292010432
+  },
+  {
+    "idx": 1801,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05310004200146068,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.1324052499985555
+  },
+  {
+    "idx": 1807,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.05236695799976587,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 6.546214375004638
+  },
+  {
+    "idx": 1825,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05264162499224767,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 6.182262665999588
+  },
+  {
+    "idx": 1887,
+    "street": "turn",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05253212500247173,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.74973462500202
+  },
+  {
+    "idx": 1936,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05308662500465289,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.827819541998906
+  },
+  {
+    "idx": 1993,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052853875007713214,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.819010332998005
+  },
+  {
+    "idx": 2001,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "call",
+    "bert_latency": 0.051692625012947246,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 6.922689082988654
+  },
+  {
+    "idx": 2025,
+    "street": "turn",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05241862499678973,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.7208014159987215
+  },
+  {
+    "idx": 2028,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.06016024999553338,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.037623040989274
+  },
+  {
+    "idx": 2031,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.053618082994944416,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.407703042001231
+  },
+  {
+    "idx": 2087,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05360683398612309,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.592214208008954
+  },
+  {
+    "idx": 2176,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "raise",
+    "bert_latency": 0.05232716700993478,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.308703250004328
+  },
+  {
+    "idx": 2208,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.05235891600023024,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.314148624995141
+  },
+  {
+    "idx": 2209,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052413958008401096,
+    "llm_raw": "check",
+    "llm_pred": "check",
+    "llm_latency": 6.264878124988172
+  },
+  {
+    "idx": 2234,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05426495798747055,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.557659124999191
+  },
+  {
+    "idx": 2245,
+    "street": "flop",
+    "truth": "fold",
+    "bert_pred": "call",
+    "bert_latency": 0.0511102500022389,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.883907540992368
+  },
+  {
+    "idx": 2273,
+    "street": "turn",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.052067582990275696,
+    "llm_raw": "bet 3",
+    "llm_pred": "bet",
+    "llm_latency": 5.436345666996203
+  },
+  {
+    "idx": 2406,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05379700000048615,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.447235084007843
+  },
+  {
+    "idx": 2442,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05347208399325609,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.86277741700178
+  },
+  {
+    "idx": 2504,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05218100000638515,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.239169166990905
+  },
+  {
+    "idx": 2543,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05349333300546277,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.319018666996271
+  },
+  {
+    "idx": 2579,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05326345800131094,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.050308624995523
+  },
+  {
+    "idx": 2584,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.053486165998037905,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.9109252500056755
+  },
+  {
+    "idx": 2604,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05324729198764544,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.236830042005749
+  },
+  {
+    "idx": 2671,
+    "street": "flop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05358329100999981,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.357435541998711
+  },
+  {
+    "idx": 2777,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052751791998161934,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 7.964263250003569
+  },
+  {
+    "idx": 2810,
+    "street": "turn",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.052872291998937726,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 6.339814916995238
+  },
+  {
+    "idx": 2811,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.0524177079932997,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 6.028670542000327
+  },
+  {
+    "idx": 2878,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.05454108299454674,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.240639666997595
+  },
+  {
+    "idx": 2880,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.060267207998549566,
+    "llm_raw": "check",
+    "llm_pred": "check",
+    "llm_latency": 5.6382792919903295
+  },
+  {
+    "idx": 2969,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05492266699729953,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.339251541998237
+  },
+  {
+    "idx": 2981,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.053691916007664986,
+    "llm_raw": "bet 20",
+    "llm_pred": "bet",
+    "llm_latency": 5.96090487499896
+  },
+  {
+    "idx": 2982,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05389366700546816,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.752576583006885
+  },
+  {
+    "idx": 3005,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05408516600436997,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.7278877919889055
+  },
+  {
+    "idx": 3075,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.058483415996306576,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.753189416995156
+  },
+  {
+    "idx": 3112,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.053008915987447836,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.091990000000806
+  },
+  {
+    "idx": 3131,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.054331541003193706,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.293790708004963
+  },
+  {
+    "idx": 3151,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.054648416000418365,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.4277064170019
+  },
+  {
+    "idx": 3206,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05445945898827631,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.1638941670098575
+  },
+  {
+    "idx": 3227,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05321054199885111,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.021947041997919
+  },
+  {
+    "idx": 3239,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.054917208006372675,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 8.027295834006509
+  },
+  {
+    "idx": 3302,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05325612500018906,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.947110540990252
+  },
+  {
+    "idx": 3306,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05336158299178351,
+    "llm_raw": "check",
+    "llm_pred": "check",
+    "llm_latency": 5.69818233299884
+  },
+  {
+    "idx": 3312,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.05345429199223872,
+    "llm_raw": "check",
+    "llm_pred": "check",
+    "llm_latency": 5.808131666010013
+  },
+  {
+    "idx": 3346,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.052449708004132845,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.774979374997201
+  },
+  {
+    "idx": 3352,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.052140540996333584,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.5368108749971725
+  },
+  {
+    "idx": 3408,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05338512499292847,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.756021249995683
+  },
+  {
+    "idx": 3420,
+    "street": "flop",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05213833399466239,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.180048374997568
+  },
+  {
+    "idx": 3440,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.053697916999226436,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.5911216660024365
+  },
+  {
+    "idx": 3455,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.054072709011961706,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.492846583001665
+  },
+  {
+    "idx": 3514,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.054775500000687316,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.472674874996301
+  },
+  {
+    "idx": 3574,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05329954200715292,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.707098874991061
+  },
+  {
+    "idx": 3589,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.052807125000981614,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.634720083005959
+  },
+  {
+    "idx": 3666,
+    "street": "flop",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.05263454200758133,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.019495833999827
+  },
+  {
+    "idx": 3682,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.05321012499916833,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.245477749995189
+  },
+  {
+    "idx": 3707,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.053949208988342434,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.479103666002629
+  },
+  {
+    "idx": 3730,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05388933299400378,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.343493167005363
+  },
+  {
+    "idx": 3750,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05363300000317395,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.4406536250025965
+  },
+  {
+    "idx": 3791,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.053209541001706384,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.562682957999641
+  },
+  {
+    "idx": 3862,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.053655000010621734,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.636989499995252
+  },
+  {
+    "idx": 3877,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05266491699148901,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.330122291998123
+  },
+  {
+    "idx": 3887,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05356504199153278,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.924693249995471
+  },
+  {
+    "idx": 3902,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05245012498926371,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.496300124999834
+  },
+  {
+    "idx": 4000,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.052482041995972395,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.613882499994361
+  },
+  {
+    "idx": 4124,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05355616699671373,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.81273845800024
+  },
+  {
+    "idx": 4146,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05372545799764339,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 7.066118415998062
+  },
+  {
+    "idx": 4147,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05321691700373776,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 4.945690874999855
+  },
+  {
+    "idx": 4191,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05407679101335816,
+    "llm_raw": "check",
+    "llm_pred": "check",
+    "llm_latency": 5.3084845830017
+  },
+  {
+    "idx": 4217,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.055124374994193204,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.026608457992552
+  },
+  {
+    "idx": 4246,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.053091167006641626,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.279553499989561
+  },
+  {
+    "idx": 4309,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.05148445800296031,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.116133417002857
+  },
+  {
+    "idx": 4348,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.053946875006658956,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.146448208994116
+  },
+  {
+    "idx": 4390,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.052752500007045455,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.899021000004723
+  },
+  {
+    "idx": 4403,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05256866599665955,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 4.947187666999525
+  },
+  {
+    "idx": 4414,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "raise",
+    "bert_latency": 0.05294154099829029,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.3603945420036325
+  },
+  {
+    "idx": 4429,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.052913875013473444,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.505037625000114
+  },
+  {
+    "idx": 4458,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05334637500345707,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.087887583998963
+  },
+  {
+    "idx": 4492,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.053427083999849856,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.74544812500244
+  },
+  {
+    "idx": 4570,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "call",
+    "bert_latency": 0.054839125004946254,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 4.869766042000265
+  },
+  {
+    "idx": 4607,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.053173500011325814,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.378567167004803
+  },
+  {
+    "idx": 4630,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05680000000575092,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 7.378736583996215
+  },
+  {
+    "idx": 4649,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05672887500259094,
+    "llm_raw": "bet 10",
+    "llm_pred": "bet",
+    "llm_latency": 6.410053375002462
+  },
+  {
+    "idx": 4685,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.0586400419997517,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.112478291004663
+  },
+  {
+    "idx": 4688,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.05694337500608526,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.413011917000404
+  },
+  {
+    "idx": 4788,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05340391700156033,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.690448208988528
+  },
+  {
+    "idx": 4856,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05326087500725407,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.4774142499954905
+  },
+  {
+    "idx": 4885,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05349904199829325,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.152255374996457
+  },
+  {
+    "idx": 4930,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05373025000153575,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.820486500000698
+  },
+  {
+    "idx": 4935,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05384375000721775,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.156005333992653
+  },
+  {
+    "idx": 4961,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.053846167007577606,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.0382112079969374
+  },
+  {
+    "idx": 5056,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.053080917001352645,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 7.67243883399351
+  },
+  {
+    "idx": 5067,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.05356045799271669,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 4.9936558330082335
+  },
+  {
+    "idx": 5165,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05362079098995309,
+    "llm_raw": "bet 20",
+    "llm_pred": "bet",
+    "llm_latency": 5.8640265420108335
+  },
+  {
+    "idx": 5252,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05375750000530388,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.427836040995317
+  },
+  {
+    "idx": 5287,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.052893500003847294,
+    "llm_raw": "bet 15",
+    "llm_pred": "bet",
+    "llm_latency": 5.673035291998531
+  },
+  {
+    "idx": 5295,
+    "street": "turn",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.05348050000611693,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.564933625006233
+  },
+  {
+    "idx": 5301,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05306104099145159,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.6004727499966975
+  },
+  {
+    "idx": 5307,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.053660167002817616,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.391777040989837
+  },
+  {
+    "idx": 5355,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.05277208400366362,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 4.9007192499993835
+  },
+  {
+    "idx": 5358,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05299120799463708,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.312591791007435
+  },
+  {
+    "idx": 5377,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05397170899959747,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.969286833991646
+  },
+  {
+    "idx": 5422,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05389279199880548,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.607231500005582
+  },
+  {
+    "idx": 5518,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.057181916999979876,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.223320332996082
+  },
+  {
+    "idx": 5532,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.056024042001808994,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.590397833002498
+  },
+  {
+    "idx": 5578,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05346054199617356,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 7.068993499997305
+  },
+  {
+    "idx": 5580,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05485558300279081,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.147194207995199
+  },
+  {
+    "idx": 5581,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.058377666005981155,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.2965581660100725
+  },
+  {
+    "idx": 5658,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05929254199145362,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.098433999999543
+  },
+  {
+    "idx": 5796,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05853420800121967,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.710410707994015
+  },
+  {
+    "idx": 5822,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05409824999514967,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.1084056249965215
+  },
+  {
+    "idx": 5829,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.053676875002565794,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.623344084000564
+  },
+  {
+    "idx": 5873,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05314304200874176,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.42957054200815
+  },
+  {
+    "idx": 5881,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05682037500082515,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.510127167013707
+  },
+  {
+    "idx": 5898,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05473841699131299,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.48085291699681
+  },
+  {
+    "idx": 6078,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05318204099603463,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.373639125013142
+  },
+  {
+    "idx": 6221,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.053190958002232946,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.257134999992559
+  },
+  {
+    "idx": 6254,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05506199999945238,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.956362833007006
+  },
+  {
+    "idx": 6276,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.053368958993814886,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.8547286670072936
+  },
+  {
+    "idx": 6278,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.0528091660089558,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.409798209002474
+  },
+  {
+    "idx": 6310,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.054089708006358705,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.919738290991518
+  },
+  {
+    "idx": 6325,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05326591699849814,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.291579083001125
+  },
+  {
+    "idx": 6333,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "call",
+    "bert_latency": 0.05401991700637154,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.536044209002284
+  },
+  {
+    "idx": 6402,
+    "street": "flop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05108475001179613,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.493797332994291
+  },
+  {
+    "idx": 6425,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052677208004752174,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 4.932333249991643
+  },
+  {
+    "idx": 6462,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.052559667004970834,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.3048954580008285
+  },
+  {
+    "idx": 6599,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05216320800536778,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.960208749995218
+  },
+  {
+    "idx": 6624,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05341125000268221,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 6.718678125005681
+  },
+  {
+    "idx": 6626,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.052488333007204346,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.992797332990449
+  },
+  {
+    "idx": 6636,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05231166600424331,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.778173458005767
+  },
+  {
+    "idx": 6699,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05214279200299643,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.0803369999921415
+  },
+  {
+    "idx": 6749,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.052344292009365745,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 4.976706624991493
+  },
+  {
+    "idx": 6760,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05288137499883305,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.059012541998527
+  },
+  {
+    "idx": 6769,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05254150000109803,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.085024917003466
+  },
+  {
+    "idx": 6827,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05302412499440834,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.741901540997787
+  },
+  {
+    "idx": 6857,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.051142166994395666,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.041369583006599
+  },
+  {
+    "idx": 6942,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.052252666995627806,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 4.7999458749982296
+  },
+  {
+    "idx": 7025,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05419958299899008,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.539622166994377
+  },
+  {
+    "idx": 7058,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "check",
+    "bert_latency": 0.055202041010488756,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.1544647499977145
+  },
+  {
+    "idx": 7075,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05208812499768101,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.480162458989071
+  },
+  {
+    "idx": 7103,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05308145900198724,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.583765542003675
+  },
+  {
+    "idx": 7137,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05314241599990055,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.838646250005695
+  },
+  {
+    "idx": 7200,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.051479707995895296,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 4.738206583991996
+  },
+  {
+    "idx": 7207,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.052110624994384125,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.144995708003989
+  },
+  {
+    "idx": 7214,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05304579199582804,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.246128833008697
+  },
+  {
+    "idx": 7271,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05248979201132897,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.328296040999703
+  },
+  {
+    "idx": 7279,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "call",
+    "bert_latency": 0.05260999999882188,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.870506959006889
+  },
+  {
+    "idx": 7372,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "call",
+    "bert_latency": 0.05195837501378264,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.238830750007764
+  },
+  {
+    "idx": 7374,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052395332997548394,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.481017084006453
+  },
+  {
+    "idx": 7378,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.052497124997898936,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.286213957995642
+  },
+  {
+    "idx": 7402,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.053230874997098,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.35757841700979
+  },
+  {
+    "idx": 7526,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05257616699964274,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.69201416701253
+  },
+  {
+    "idx": 7528,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.050800333003280684,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.605775000003632
+  },
+  {
+    "idx": 7548,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "call",
+    "bert_latency": 0.05195599999569822,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.614122541999677
+  },
+  {
+    "idx": 7557,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052981125001679175,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.259968708007364
+  },
+  {
+    "idx": 7561,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05181258400261868,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.307862875008141
+  },
+  {
+    "idx": 7588,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.051409291991149075,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 4.998481917005847
+  },
+  {
+    "idx": 7590,
+    "street": "flop",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.050143125001341105,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.50080275000073
+  },
+  {
+    "idx": 7597,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "raise",
+    "bert_latency": 0.052611749997595325,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.456047708998085
+  },
+  {
+    "idx": 7599,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.052804499995545484,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.764411791009479
+  },
+  {
+    "idx": 7603,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.05215370800578967,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.6935956250090385
+  },
+  {
+    "idx": 7614,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05232820899982471,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.606235666986322
+  },
+  {
+    "idx": 7648,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.051398499999777414,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.609367625002051
+  },
+  {
+    "idx": 7653,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "fold",
+    "bert_latency": 0.05268645800242666,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.244148249999853
+  },
+  {
+    "idx": 7805,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "raise",
+    "bert_latency": 0.05248191699502058,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.980557292001322
+  },
+  {
+    "idx": 7881,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05282195800100453,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.537168665992795
+  },
+  {
+    "idx": 7922,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.052396749990293756,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.862287625001045
+  },
+  {
+    "idx": 7955,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05309504200704396,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.671426332992269
+  },
+  {
+    "idx": 7988,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05075362500792835,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.296739333993173
+  },
+  {
+    "idx": 8024,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.052820416996837594,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.601799666997977
+  },
+  {
+    "idx": 8055,
+    "street": "flop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.050836916998378,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.39195666598971
+  },
+  {
+    "idx": 8083,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05222908400173765,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 4.846879916003672
+  },
+  {
+    "idx": 8119,
+    "street": "flop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05036545899929479,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.08667441700527
+  },
+  {
+    "idx": 8249,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052255290996981785,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.163718625000911
+  },
+  {
+    "idx": 8281,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05307316700054798,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 4.695777040993562
+  },
+  {
+    "idx": 8315,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05259104100696277,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 4.987266999989515
+  },
+  {
+    "idx": 8363,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.053039457998238504,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.890257582999766
+  },
+  {
+    "idx": 8375,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05253229099616874,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.044891584009747
+  },
+  {
+    "idx": 8405,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05275025000446476,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.136113749991637
+  },
+  {
+    "idx": 8407,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.05238158300926443,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.523213416992803
+  },
+  {
+    "idx": 8421,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052417915998375975,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.305296874998021
+  },
+  {
+    "idx": 8432,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05283149999740999,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 6.729772958002286
+  },
+  {
+    "idx": 8436,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052070625009946525,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.363962708011968
+  },
+  {
+    "idx": 8442,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05333079199772328,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.514928250006051
+  },
+  {
+    "idx": 8444,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05210595800599549,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.394352040995727
+  },
+  {
+    "idx": 8545,
+    "street": "flop",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.0508930420037359,
+    "llm_raw": "check",
+    "llm_pred": "check",
+    "llm_latency": 5.603901666996535
+  },
+  {
+    "idx": 8547,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "fold",
+    "bert_latency": 0.05258999999205116,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.926690666994546
+  },
+  {
+    "idx": 8568,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.053184624994173646,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.242779166990658
+  },
+  {
+    "idx": 8576,
+    "street": "river",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.053301082996767946,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.322060834005242
+  },
+  {
+    "idx": 8638,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05295041600766126,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 6.03067504199862
+  },
+  {
+    "idx": 8659,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05138120800256729,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.706925250007771
+  },
+  {
+    "idx": 8672,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05206566699780524,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.935764250010834
+  },
+  {
+    "idx": 8836,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.05239787499886006,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.115599458003999
+  },
+  {
+    "idx": 8895,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "check",
+    "bert_latency": 0.05173199999262579,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 7.774897915995098
+  },
+  {
+    "idx": 8969,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.051337541997781955,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.529173875009292
+  },
+  {
+    "idx": 8974,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05251991600380279,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 6.154189499997301
+  },
+  {
+    "idx": 9021,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.05198870800086297,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.4018375409941655
+  },
+  {
+    "idx": 9050,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.052227666004910134,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.783945082992432
+  },
+  {
+    "idx": 9053,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05299541699059773,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.3126889999985
+  },
+  {
+    "idx": 9097,
+    "street": "river",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.05251504199986812,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.388369166990742
+  },
+  {
+    "idx": 9153,
+    "street": "river",
+    "truth": "raise",
+    "bert_pred": "call",
+    "bert_latency": 0.052442458996665664,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.445684249993064
+  },
+  {
+    "idx": 9154,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05287879200477619,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 6.298817250004504
+  },
+  {
+    "idx": 9168,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.05182845900708344,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.7878061670053285
+  },
+  {
+    "idx": 9184,
+    "street": "turn",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05236658299691044,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.104957917006686
+  },
+  {
+    "idx": 9212,
+    "street": "flop",
+    "truth": "fold",
+    "bert_pred": "call",
+    "bert_latency": 0.05102604199782945,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.908043417002773
+  },
+  {
+    "idx": 9245,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05184345900488552,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 6.166451291996054
+  },
+  {
+    "idx": 9306,
+    "street": "flop",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.04959270800463855,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.946224665996851
+  },
+  {
+    "idx": 9316,
+    "street": "river",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.05148995800118428,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.585070624991204
+  },
+  {
+    "idx": 9353,
+    "street": "turn",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.05380150000564754,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.484597082991968
+  },
+  {
+    "idx": 9450,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05234879199997522,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 6.7629196249909
+  },
+  {
+    "idx": 9487,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05189774998871144,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.432440000004135
+  },
+  {
+    "idx": 9557,
+    "street": "flop",
+    "truth": "bet",
+    "bert_pred": "bet",
+    "bert_latency": 0.05060416700143833,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.790296167004271
+  },
+  {
+    "idx": 9738,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052812082998570986,
+    "llm_raw": "bet",
+    "llm_pred": "bet",
+    "llm_latency": 5.7109263750026
+  },
+  {
+    "idx": 9825,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "bet",
+    "bert_latency": 0.05243533400062006,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.664773333002813
+  },
+  {
+    "idx": 9867,
+    "street": "turn",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.05865412499406375,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 4.972130416994332
+  },
+  {
+    "idx": 9936,
+    "street": "river",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.052676915991469286,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.029475458999514
+  },
+  {
+    "idx": 9974,
+    "street": "turn",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.05357870800071396,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.3269566249946365
+  },
+  {
+    "idx": 10040,
+    "street": "preflop",
+    "truth": "check",
+    "bert_pred": "raise",
+    "bert_latency": 0.04519466699275654,
+    "llm_raw": "check",
+    "llm_pred": "check",
+    "llm_latency": 5.55948595800146
+  },
+  {
+    "idx": 10083,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.045660624993615784,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.230158417005441
+  },
+  {
+    "idx": 10134,
+    "street": "preflop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.04477387500810437,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.081654375011567
+  },
+  {
+    "idx": 10209,
+    "street": "preflop",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.04529900000488851,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.5595868750097
+  },
+  {
+    "idx": 10244,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05106700000760611,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.687452832993586
+  },
+  {
+    "idx": 10267,
+    "street": "preflop",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.04573812500166241,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 6.189701667011832
+  },
+  {
+    "idx": 10271,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05070091600646265,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.332931083990843
+  },
+  {
+    "idx": 10307,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05061045799811836,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.998721915995702
+  },
+  {
+    "idx": 10321,
+    "street": "preflop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.04687149998790119,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.403116625006078
+  },
+  {
+    "idx": 10323,
+    "street": "preflop",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.045825875000446104,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.779330375007703
+  },
+  {
+    "idx": 10405,
+    "street": "preflop",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.044857250002678484,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.289746708003804
+  },
+  {
+    "idx": 10429,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.04714762499497738,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.503074499996728
+  },
+  {
+    "idx": 10468,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.04631458299991209,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.77245070799836
+  },
+  {
+    "idx": 10535,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.04715562499768566,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.851404917004402
+  },
+  {
+    "idx": 10578,
+    "street": "preflop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.050860874995123595,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.348681792005664
+  },
+  {
+    "idx": 10597,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.05024987499928102,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 6.226031374986633
+  },
+  {
+    "idx": 10608,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.050625417003175244,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 4.887170292000519
+  },
+  {
+    "idx": 10634,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.045222417000331916,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.204067500002566
+  },
+  {
+    "idx": 10660,
+    "street": "preflop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.050400166990584694,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 5.589253291997011
+  },
+  {
+    "idx": 10673,
+    "street": "preflop",
+    "truth": "call",
+    "bert_pred": "raise",
+    "bert_latency": 0.04563579200475942,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 6.146834667000803
+  },
+  {
+    "idx": 10685,
+    "street": "preflop",
+    "truth": "check",
+    "bert_pred": "check",
+    "bert_latency": 0.045557958001154475,
+    "llm_raw": "call",
+    "llm_pred": "call",
+    "llm_latency": 7.697112875001039
+  },
+  {
+    "idx": 10687,
+    "street": "preflop",
+    "truth": "call",
+    "bert_pred": "fold",
+    "bert_latency": 0.04983091699250508,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.807004916990991
+  },
+  {
+    "idx": 10733,
+    "street": "preflop",
+    "truth": "call",
+    "bert_pred": "call",
+    "bert_latency": 0.04605079200700857,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.191285458000493
+  },
+  {
+    "idx": 10769,
+    "street": "preflop",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.04508133300987538,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.508420415993896
+  },
+  {
+    "idx": 10951,
+    "street": "preflop",
+    "truth": "raise",
+    "bert_pred": "raise",
+    "bert_latency": 0.04516104199865367,
+    "llm_raw": "raise",
+    "llm_pred": "raise",
+    "llm_latency": 5.622984417001135
+  },
+  {
+    "idx": 10957,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.0511043750011595,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.6617613330017775
+  },
+  {
+    "idx": 10958,
+    "street": "preflop",
+    "truth": "fold",
+    "bert_pred": "fold",
+    "bert_latency": 0.04664162499830127,
+    "llm_raw": "fold",
+    "llm_pred": "fold",
+    "llm_latency": 5.2688511250016745
+  }
+]
