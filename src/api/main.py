@@ -10,6 +10,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from agents.supervisor import build_graph
 from src.rl.inference import RLAgent
+from src.models.predictor import ActionPredictor
 
 app = FastAPI()
 
@@ -22,6 +23,7 @@ app.add_middleware(
 
 graph = build_graph()
 rl_agent = RLAgent()
+predictor = ActionPredictor()
 
 
 class HandRequest(BaseModel):
@@ -45,6 +47,18 @@ def rl_analyze(request: RLRequest):
     except ValueError as e:
         # input didn't match the expected format, so it's a client error, not a crash
         raise HTTPException(status_code=400, detail=str(e))
+
+
+class PredictRequest(BaseModel):
+    hand_situation: str
+
+
+@app.post("/predict")
+def predict(request: PredictRequest):
+    """Fine-tuned DistilBERT: predicts the solver's action for a PokerBench-format hand."""
+    if not request.hand_situation.strip():
+        raise HTTPException(status_code=400, detail="hand_situation is empty")
+    return predictor.predict(request.hand_situation)
 
 
 @app.post("/analyze")
