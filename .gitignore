@@ -6,3 +6,4 @@ __pycache__/
 chroma_db/
 src/models/poker_distilbert/
 wandb/
+.pytest_cache/
