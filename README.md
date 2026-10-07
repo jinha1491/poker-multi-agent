@@ -67,6 +67,18 @@ For v2 I took a seeded shuffle of the full training split (11.2% preflop, same a
 
 Bet is the weakest class, and also the rarest label (950 of 11,000 test hands). v1 was worse on it, with bet precision of 0.35.
 
+The confusion matrix (rows are the true action) shows where the misses go:
+
+| True \\ predicted | Fold | Call | Check | Raise | Bet |
+|---|---|---|---|---|---|
+| Fold | 2294 | 284 | 0 | 172 | 0 |
+| Call | 431 | 1824 | 0 | 495 | 0 |
+| Check | 0 | 0 | 2296 | 105 | 349 |
+| Raise | 232 | 263 | 31 | 1274 | 0 |
+| Bet | 0 | 0 | 455 | 0 | 495 |
+
+The errors split along the legal actions. Facing a bet, a player can fold, call, or raise. When nobody has bet yet, a player can check or bet. Apart from 136 hands (1.2%) mixing up check and raise, the model never predicts an action from the wrong group. Every missed bet was predicted as check (455 of 455). So the model reads the situation correctly, and its mistakes are in the strategic choice itself: whether to bet, and whether to fold, call, or raise.
+
 ### Truncation check
 
 River was the weakest street, and 62% of test hands go past the 256-token limit (98.8% of river hands). I looked at what gets cut off on the longest hand in the test set. It's the closing instruction, which is the same in every prompt, plus a repeat of the hole cards that are already listed earlier. The pot size and the full action history are kept. Truncation doesn't explain the lower river accuracy, so I didn't retrain for it.
