@@ -154,6 +154,17 @@ curl -X POST http://localhost:8000/rl-analyze \
   -d '{"hand_situation": "You are in the BTN position with deep stacks. You have a premium hand."}'
 ```
 
+### Docker
+
+The image installs CPU-only PyTorch and downloads the fine-tuned model from the Hugging Face Hub at build time. The OpenAI key is passed in at runtime and never copied into the image.
+
+```bash
+docker build -t poker-api .
+docker run --rm -p 8080:8080 --env-file .env -v "$(pwd)/chroma_db:/app/chroma_db" poker-api
+```
+
+The volume mount is only needed for `/analyze`.
+
 ### Reproducing the results
 
 ```bash
